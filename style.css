@@ -7,6 +7,25 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #fff;
+  position: relative;
+}
+
+.random {
+  position: absolute;
+  top: 1rem;
+  right: 3.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2px;
+  font-size: 1rem;
+  color: #919191;
+}
+.random img {
+  margin-left: 5px;
+  width: 0.8rem;
+  color: #919191;
 }
 
 .quote-section {
@@ -33,7 +52,7 @@ body {
   font-size: 20px;
   padding: 0;
   margin: 0;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .quote__footer .genre {
