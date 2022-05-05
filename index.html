@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quotes</title>
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <span class="random">
       random
-      <img src="/images/random-solid.svg" alt="image of random icon" />
+      <i class="bi bi-shuffle"></i>
     </span>
+
+    <main class="quotes">
+        
+    </main>
+
     <section class="quote-section">
       <div class="quote__body">
-        <p class="quote_paragraph">
-          The Quote is Loading....
-        </p>
+        <p class="quote_paragraph">The Quote is Loading....</p>
       </div>
       <div class="quote__footer">
         <div class="footer__information">
           <p class="author"></p>
           <p class="genre"></p>
+        </div>
+
+        <div class="next-icon">
+            <i class="bi bi-arrow-right"></i>
         </div>
       </div>
     </section>
@@ -30,6 +41,7 @@
     <footer id="footer">
       <p>created by <span class="name">Bahoz Ali</span></p>
     </footer>
+
     <script type="module" src="index.js"></script>
   </body>
 </html>

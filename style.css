@@ -22,30 +22,63 @@ body {
   font-size: 1rem;
   color: #919191;
 }
-.random img {
+.random i {
   margin-left: 5px;
   width: 0.8rem;
   color: #919191;
 }
 
 .quote-section {
+  padding: 0;
   /* background-color: red; */
 }
 
 .quote-section .quote__body .quote_paragraph {
   border-left: 4px solid #f7df94;
-  padding-left: 40px;
+  padding-left: 3rem;
   max-width: 12cm;
   font-size: 1.2rem;
   font-family: Spectral, Spirax, Verdana, Geneva, Tahoma, sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .quote-section .quote__footer {
-  margin-top: 5rem;
+  margin-top: 3rem;
+  padding-left: 2rem;
+  position: relative;
 }
 
 .quote-section .quote__footer .footer__information {
-  padding-left: 40px;
+  padding: 2rem 0rem 2rem 1rem;
+  transition: all 0.3s linear;
+}
+
+.quote-section .footer__information:hover {
+  background-color: #333333;
+  padding: 2rem 0rem 2rem 1rem;
+  cursor: pointer;
+}
+
+.quote-section .footer__information:hover .author {
+  color: white;
+}
+.quote-section .footer__information:hover + .next-icon {
+  display: block;
+  width: 20px;
+  position: absolute;
+  top: 40%;
+  right: 40px;  
+}
+
+.quote-section .quote__footer .next-icon {
+  display: none;
+}
+
+i{
+  color: white;
 }
 
 .quote__footer .author {
@@ -61,7 +94,7 @@ body {
   color: #828282;
 }
 
-/* footer */
+/* ------------------ footer ----------------- */
 #footer {
   position: fixed;
   bottom: 0;
