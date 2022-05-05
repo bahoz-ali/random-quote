@@ -5,16 +5,26 @@ const API_VERSION = "api/v3/";
 const quoteParagraph = document.querySelector(".quote_paragraph");
 const genre = document.querySelector(".genre");
 const author = document.querySelector(".author");
+const randomButton = document.querySelector(".random");
 
 // start quote service start.
-const randomQuote = () => {
-  return new Promise((success, reject) => {
-    fetch(`${API_URL}${API_VERSION}quotes/random`)
-      .then((response) => response.json())
-      .then((data) => success(data))
-      .catch((error) => reject(error));
-  });
-};
+async function randomQuote() {
+  try {
+    const response = await fetch(`${API_URL}${API_VERSION}quotes/random`);
+    const quote = await response.json();
+    updateQuote(quote);
+  } catch (error) {
+    quoteParagraph.innerHTML = "sorry the api not working";
+  }
+}
+
+function updateQuote(quote) {
+  const { quoteText, quoteAuthor, quoteGenre } = quote.data[0];
+
+  quoteParagraph.innerHTML = quoteText;
+  author.innerHTML = quoteAuthor;
+  genre.innerHTML = quoteGenre;
+}
 
 const authorQuotes = (authorName, page = 1, limit = 10) => {
   return new Promise((success, reject) => {
@@ -58,14 +68,5 @@ const searchQuotes = (searchKeyword, page = 1, limit = 10) => {
 };
 // end service
 
-randomQuote()
-  .then((quote) => {
-    const { quoteText, quoteAuthor, quoteGenre } = quote.data[0];
-
-    quoteParagraph.innerHTML = quoteText;
-    author.innerHTML = quoteAuthor;
-    genre.innerHTML = quoteGenre;
-  })
-  .catch((error) => {
-    quoteParagraph.innerHTML = "sorry the api not working"
-  });
+randomQuote();
+randomButton.addEventListener("click", randomQuote);
