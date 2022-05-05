@@ -66,6 +66,7 @@ body {
   color: white;
 }
 .quote-section .footer__information:hover + .next-icon {
+  pointer-events: none;
   display: block;
   width: 20px;
   position: absolute;
@@ -93,6 +94,21 @@ i{
   margin: 0;
   color: #828282;
 }
+
+/* ------------------- main quotes ---------- */
+.quotes{
+  display: block;
+  background-color: #f6e2e2;
+  border-radius: 10px;
+  margin-top: 1rem;
+  height: auto;
+
+}
+.quotes .quote-section{
+  margin-bottom: 2.5rem;
+  padding: 0.5rem 2rem;
+}
+
 
 /* ------------------ footer ----------------- */
 #footer {
