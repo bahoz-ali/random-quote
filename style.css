@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Spirax&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.quote-section {
+  /* background-color: red; */
+}
+
+.quote-section .quote__body .quote_paragraph {
+  border-left: 4px solid #f7df94;
+  padding-left: 40px;
+  max-width: 12cm;
+  font-size: 1.2rem;
+  font-family: Spectral, Spirax, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.quote-section .quote__footer {
+  margin-top: 5rem;
+}
+
+.quote-section .quote__footer .footer__information {
+  padding-left: 40px;
+}
+
+.quote__footer .author {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  color: #4F4F4F;
+}
+
+.quote__footer .genre {
+  padding: 0;
+  margin: 0;
+  color: #828282;
+}
+
+/* footer */
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #403f3f;
+}
+
+#footer p {
+  padding: 0;
+  margin: 0;
+}
+
+#footer p .name {
+  color: #828282;
+}
